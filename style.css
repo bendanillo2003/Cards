@@ -1,0 +1,195 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-image: url('https://wallpapers.com/images/high/mix-color-2560-x-1600-background-r4e9huzf751xgw78.webp');
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: aliceblue;
+}
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.pokemon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: 150px;
+    height: 210px;
+}
+.cards{
+    border: transparent;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgb(176, 106, 241);
+    position: relative;
+    overflow: hidden;
+}
+.cards:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: aquamarine;
+    animation: glow 1.5s infinite alternate;
+}
+.cards::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 13px;
+    pointer-events: none;
+    z-index: -1;
+    background: rgba(176, 106, 241, 0.5);
+    box-shadow: 0 0 15px rgba(176, 106, 241, 0.7), 0 0 30px rgba(176, 106, 241, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.cards:hover::before {
+    opacity: 1;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(176, 106, 241, 0.7), 0 0 30px rgba(176, 106, 241, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(176, 106, 241, 0.8), 0 0 60px rgba(176, 106, 241, 1);
+    }
+}
+.cards ul{
+    padding: 0px;
+    margin: 0px;
+}
+.pokemon-id{
+    font-size: 30px;
+    font-weight: bold;
+}
+.pokemon-name{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+}
+.pokemon-type {
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+}
+.cards:hover .pokemon-type {
+    opacity: 1; 
+    visibility: visible; 
+}
+.electric, .dark, .ice, .grass, .psychic, .bug, .steel, .ghost, .rock, .flying, .normal, .fairy, .water, .dragon, .poison, .fire {
+    border: transparent;
+    padding: 5px 5px;
+    border-radius: 8px;
+}
+.electric{
+    background-color: yellow;
+    border: transparent;
+    padding: 1px 5px;
+}
+.dark{
+    background-color: rgb(102, 102, 102);
+    border: transparent;
+    padding: 1px 5px;
+}
+.ice{
+    background-color: rgba(73, 93, 209, 0.781);
+    border: transparent;
+    padding: 1px 5px;
+}
+.grass{
+    background-color: rgba(60, 128, 45, 0.754);
+    border: transparent;
+    padding: 1px 5px;
+}
+.psychic{
+    background-color: rgba(128, 45, 128, 0.817);
+    border: transparent;
+    padding: 1px 5px;
+}
+.bug{
+    background-color: rgb(89, 128, 45);
+    border: transparent;
+    padding: 1px 5px;
+}
+.steel{
+    background-color: rgba(63, 64, 62, 0.544);
+    border: transparent;
+    padding: 1px 5px;
+}
+.ghost{
+    background-color: rgba(128, 129, 127, 0.909);
+    border: transparent;
+    padding: 1px 5px;
+}
+.rock{
+    background-color: rgb(128, 129, 127);
+    border: transparent;
+    padding: 1px 5px;
+}
+.flying{
+    background-color: rgba(249, 149, 247, 0.673);
+    border: transparent;
+    padding: 1px 5px;
+}
+.normal{
+    background-color: rgba(239, 195, 114, 0.673);
+    border: transparent;
+    padding: 1px 5px;
+}
+.fairy{
+    background-color: rgba(247, 76, 187, 0.673);
+    border: transparent;
+    padding: 1px 5px;
+}
+.water{
+    background-color: rgba(56, 133, 157, 0.798);
+    border: transparent;
+    padding: 1px 5px;
+}
+.dragon{
+    background-color: rgba(202, 81, 37, 0.798);
+    border: transparent;
+    padding: 1px 5px;
+}
+.poison{
+    background-color: rgba(180, 149, 53, 0.798);
+    border: transparent;
+    padding: 1px 5px;
+}
+.fire{
+    background-color: rgba(130, 57, 37, 0.798);
+    border: transparent;
+    padding: 1px 5px;
+}
